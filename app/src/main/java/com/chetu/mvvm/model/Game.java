@@ -14,7 +14,9 @@ public class Game {
     public Cell[][] cells;
 
     public MutableLiveData<Player> winner = new MutableLiveData<>();
-
+/*
+Add constructor
+ */
     public Game() {
         cells = new Cell[BOARD_SIZE][BOARD_SIZE];
         player1 = new Player("playerOne", "x");
@@ -29,6 +31,9 @@ public class Game {
         currentPlayer = player1;
     }
 
+    /**
+     * switch player
+     */
     public void switchPlayer() {
         currentPlayer = currentPlayer == player1 ? player2 : player1;
     }
